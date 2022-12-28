@@ -32,16 +32,16 @@ class TestModel(APITestCase):
     def test_cant_create_super_user_with_no_is_staff_status(self):
         with self.assertRaisesMessage(ValueError, 'Superuser must have is_staff=True.'):
             User.objects.create_superuser(
-                username='username', email='noyohanx@gmail.com', password='yuchan123!', is_staff=False)
+                username='username', email='oychan50@gmail.com', password='yuchan123!', is_staff=False)
 
     def test_cant_create_super_user_with_no_super_user_status(self):
         with self.assertRaisesMessage(ValueError, 'Superuser must have is_superuser=True.'):
             User.objects.create_superuser(
-                username='username', email='crycetruly@gmail.com', password='yuchan123!', is_superuser=False)
+                username='username', email='oychan50@gmail.com', password='yuchan123!', is_superuser=False)
 
     def test_creates_super_user(self):
         user = User.objects.create_superuser(
-            'yohan', 'noyohanx@gmail.com', 'yuchan123!')
+            'yohan', 'oychan50@gmail.com', 'yuchan123!')
         self.assertIsInstance(user, User)
         self.assertTrue(user.is_staff)
-        self.assertEqual(user.email, 'noyohanx@gmail.com')
+        self.assertEqual(user.email, 'oychan50@gmail.com')
