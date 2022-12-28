@@ -1,1 +1,1 @@
-# G-stock-DRF-Server
+# GSTOCK-DRF-Server
